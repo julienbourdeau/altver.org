@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <link href="./styles.css" rel="stylesheet">
+
+  <meta name="description" content="{{ attr.description }}" />
+  <title>{{ attr.title }}</title>
+</head>
+<body class="">
+  <div class="container mx-auto max-w-4xl">
+
+    <header class="text-center font-serif p-16 lg:p-24 space-y-3 md:space-y-6">
+      <h1 class="text-4xl font-semibold ">
+        Alternative Versioning
+        <sup class="font-normal font-mono text-lg text-gray-400 italic">beta</sup>
+      </h1>
+
+      <div class="text-lg md:text-xl">
+        <a href="https://altver.org/"><span class="font-mono text-base md:text-lg">AltVer</span></a>
+          is a relaxed alternative to
+          <a target="_blank" href="https://semver.org/"><span class="font-mono text-base md:text-lg">SemVer</span></a>.
+      </div>
+    </header>
+
+    <div class="prose prose-sm md:prose-base max-w-none leading-snug">
+      {{{ body }}}
+    </div>
+
+    <footer class="mt-24 md:mt-32 py-4 md:-y-8 flex items-center justify-between text-gray-500 text-sm ">
+      <div>Specified by <a class="underline" href="https://julienbourdeau.com">Julien Bourdeau</a></div>
+      <div>
+        <a class="font-bold" href="https://creativecommons.org/licenses/by/4.0/deed.en/">CC BY 4.0</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
