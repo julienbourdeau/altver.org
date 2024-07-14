@@ -2,16 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.prose a {
-  @apply text-sky-700 underline;
-}
-.prose h2 {
-  @apply text-3xl text-center font-serif font-medium;
-}
-.prose h3 {
-  @apply text-lg font-serif font-semibold;
-}
-
 .prose pre {
   @apply bg-gray-100 text-gray-900;
 }

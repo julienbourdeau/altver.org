@@ -6,39 +6,35 @@ title: Alternative Versioning
 
 Given a version number `BRAND.NEW.CARE`, increment the:
 
-* `BRAND` version when you make something extraordinary, usually with breaking changes
-* `NEW` version when you add exiting new functionalities, with an easy upgrade path
-* `CARE` version when you make backward compatible bug fixes and improvements
+`BRAND`: version when you make something extraordinary, usually with breaking changes <br>
+`NEW` version when you add exiting new functionalities, with an easy upgrade path <br>
+`CARE` version when you make backward compatible bug fixes and improvements <br>
 
 Just like SemVer, additional labels for pre-release and build metadata are available as extensions.
 
 ## Motivation
 
 After a decade of using and maintaining open source, I've come to realized that SemVer isn't perfect. 
-AltVer is actually how many projects are versioned in the wild without saying it officially.
+People are scared of major upgrades because they are going to break. Maintainer are hesitant to tag a major 
+version when they introduce breaking change because they know a large part of the user base will fall behind.
+
+In the wild, many projects are actually versioned with AltVer without knowing it.
 
 
 
 ## Specification
 
-* BRAND: must be exiting, the upgrade might not be too obvious so people must WANT to do it.
-* NEW: usually important new feature, something visible, a config you might want to turn on
-* CARE: bug fixes, performance improvements, new features that are not as visible, etc.
+Any new BRAND version must be exciting! The upgrade might require some extra work so people must want to do it.
+ 
+NEW version usually include important new feature, something visible, like setting you want to enable.
 
-* As the project matures, BRAND probably reach the end and won't be updated again, NEW become more and more rare while CARE is the most common.
+New CARE version include bug fixes, performance improvements, and new features that are not as visible.
 
-## FAQ
+As the project matures, BRAND probably reach the end and won't be updated again, NEW become more and more rare while CARE is the most common.
 
-### What are the numbering syntax differences between SemVer and AltVer?
+## Version restriction for package manager
 
-None! AltVer is a superset of SemVer, it's just a different way to interpret the version numbers. When looking at a
-version number using AltVer, there is no way to tell it apart from SemVer.
-
-The same [Backus–Naur Form Grammar](https://semver.org/#backusnaur-form-grammar-for-valid-semver-versions) can be used.
-
-### As a user, what version restriction should I put in my package manager?
-
-Because AltVer is a superset of SemVer, I recommend using the same restrictions. 
+Because AltVer is a superset of SemVer, I recommend using the same restrictions.
 Ideally, you want update to next NEW version automatically. If a lib is very sensitive or if you test coverage isn't great yet, you should at least update to latest CARE version automatically.
 
 Examples with NPM:
@@ -66,3 +62,13 @@ Example with Bundler:
 ```ruby
 gem 'my-lib', '~> 1.0'
 ```
+
+
+## FAQ
+
+### What are the numbering syntax differences between SemVer and AltVer?
+
+None! AltVer is a superset of SemVer, it's just a different way to interpret the version numbers. When looking at a
+version number using AltVer, there is no way to tell it apart from SemVer.
+
+The same [Backus–Naur Form Grammar](https://semver.org/#backusnaur-form-grammar-for-valid-semver-versions) can be used.

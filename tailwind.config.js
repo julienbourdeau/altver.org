@@ -1,6 +1,7 @@
 const fontFamily = require('tailwindcss/defaultTheme').fontFamily;
-fontFamily.sans = ['"Open Sans"', ...fontFamily.sans]
-fontFamily.serif = ['Mate', ...fontFamily.serif]
+
+fontFamily.body = ['Bitter', ...fontFamily.serif]
+fontFamily.heading = ['Jost', ...fontFamily.sans]
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -8,8 +9,9 @@ export default {
   theme: {
     fontFamily,
     screens: {
-      'md': '768px',
-      'lg': '1024px',
+      // 'md': '768px',
+      // 'lg': '1024px',
+      'md': '1024px',
     },
 
     extend: {},
