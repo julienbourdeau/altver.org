@@ -10,13 +10,14 @@ marked.use(
 )
 
 
-export function markdownToHtml(markdown) {
-  // markdown = markdown.replace(new RegExp("BRAND", 'g'), '<span class="brand">BRAND</span>');
-
+export function markdownToHtml(md) {
+  // Replace BRAND, NEW, CARE with custom <span> element
   ["BRAND", "NEW", "CARE"].forEach(word => {
     const regex = new RegExp(`\\b${word}\\b(?=[.,!?;:])?`, 'g');
-    markdown = markdown.replace(regex, `<span class="brand">${word}</span>`);
+    md = md.replace(regex, `<span class="brand">${word}</span>`);
   })
 
-  return marked.parse(markdown);
+  md = md.replaceAll('./public', '');
+
+  return marked.parse(md);
 }

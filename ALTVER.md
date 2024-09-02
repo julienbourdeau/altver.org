@@ -5,7 +5,7 @@ title: Alternative Versioning
 ## Summary
 
 ![ALTVER summary](./public/assets/altver.png#gh-light-mode-only)
-![ALTVER summary](./public/assets/altver-dark.png#gh-dark-mode-only)
+<!-- ![ALTVER summary](./public/assets/altver-dark.png#gh-dark-mode-only) -->
 
 The version number is composed of three parts: BRAND, NEW, and CARE.
 
