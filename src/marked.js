@@ -11,5 +11,12 @@ marked.use(
 
 
 export function markdownToHtml(markdown) {
+  // markdown = markdown.replace(new RegExp("BRAND", 'g'), '<span class="brand">BRAND</span>');
+
+  ["BRAND", "NEW", "CARE"].forEach(word => {
+    const regex = new RegExp(`\\b${word}\\b(?=[.,!?;:])?`, 'g');
+    markdown = markdown.replace(regex, `<span class="brand">${word}</span>`);
+  })
+
   return marked.parse(markdown);
 }

@@ -5,7 +5,7 @@ import mustache from "mustache";
 import { markdownToHtml } from "./marked.js";
 
 const config = {
-  srcCssPath: './public/styles.css',
+  srcCssPath: './public/css/styles.css',
   cssFilename: 'styles.css',
 }
 
@@ -24,11 +24,12 @@ const getHtmlContent = () => {
 
 
 if (fs.existsSync(config.srcCssPath)) {
+  fs.rmSync('./public/css/', { recursive: true, force: true });
   const fileBuffer = fs.readFileSync(config.srcCssPath);
   const hash = crypto.createHash('sha256').update(fileBuffer).digest('hex');
   console.log(`CSS File Hash: ${hash}`);
   config.cssFilename = `styles-${hash.substring(0, 8)}.css`;
-  fs.renameSync(config.srcCssPath, `./public/${config.cssFilename}`);
+  fs.renameSync(config.srcCssPath, `./public/css/${config.cssFilename}`);
 }
 
 fs.writeFile(

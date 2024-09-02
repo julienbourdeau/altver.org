@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .prose pre {
-  @apply bg-gray-100 text-gray-900;
+  @apply bg-gray-blue-100 text-gray-blue-900 border border-gray-200;
 }
 
 .prose code::before, .prose code::after {

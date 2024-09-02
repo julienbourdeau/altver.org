@@ -4,11 +4,14 @@ title: Alternative Versioning
 
 ## Summary
 
-Given a version number `BRAND.NEW.CARE`, increment the:
+![ALTVER summary](./public/assets/altver.png#gh-light-mode-only)
+![ALTVER summary](./public/assets/altver-dark.png#gh-dark-mode-only)
 
-`BRAND`: version when you make something extraordinary, usually with breaking changes <br>
-`NEW` version when you add exiting new functionalities, with an easy upgrade path <br>
-`CARE` version when you make backward compatible bug fixes and improvements <br>
+The version number is composed of three parts: BRAND, NEW, and CARE.
+
+Increment BRAND when you make something extraordinary, usually with breaking changes. Increment NEW
+when you add exciting new functionalities (even with breaking change but with an easy upgrade path. Increment
+CARE version when you make backward compatible bug fixes and improvements
 
 Just like SemVer, additional labels for pre-release and build metadata are available as extensions.
 
@@ -69,6 +72,4 @@ gem 'my-lib', '~> 1.0'
 ### What are the numbering syntax differences between SemVer and AltVer?
 
 None! AltVer is a superset of SemVer, it's just a different way to interpret the version numbers. When looking at a
-version number using AltVer, there is no way to tell it apart from SemVer.
-
-The same [Backus–Naur Form Grammar](https://semver.org/#backusnaur-form-grammar-for-valid-semver-versions) can be used.
+version number using AltVer, there is no way to tell it apart from SemVer. The same [Backus–Naur Form Grammar](https://semver.org/#backusnaur-form-grammar-for-valid-semver-versions) can be used.
