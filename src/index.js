@@ -5,8 +5,8 @@ import mustache from "mustache";
 import { markdownToHtml } from "./marked.js";
 
 const config = {
-  srcCssPath: './public/css/styles.css',
-  cssFilename: 'styles.css',
+  srcCssPath: './public/styles.css', // given by tailwindcss cli tool
+  cssFilename: '/css/styles-[HASH].css',
 }
 
 const getHtmlContent = () => {
@@ -24,12 +24,17 @@ const getHtmlContent = () => {
 
 
 if (fs.existsSync(config.srcCssPath)) {
-  fs.rmSync('./public/css/', { recursive: true, force: true });
+  fs.rmSync('./public/css', { recursive: true, force: true });
+  fs.mkdirSync('./public/css')
+
   const fileBuffer = fs.readFileSync(config.srcCssPath);
-  const hash = crypto.createHash('sha256').update(fileBuffer).digest('hex');
-  console.log(`CSS File Hash: ${hash}`);
-  config.cssFilename = `styles-${hash.substring(0, 8)}.css`;
-  fs.renameSync(config.srcCssPath, `./public/css/${config.cssFilename}`);
+  const hash = crypto.createHash('sha256').update(fileBuffer).digest('hex').substring(0, 8);
+  // console.log(`CSS File Hash: ${hash}`);
+  config.cssFilename = config.cssFilename.replace('[HASH]', hash);
+  console.log(config)
+
+
+  fs.renameSync(config.srcCssPath, `./public/${config.cssFilename}`);
 }
 
 fs.writeFile(
