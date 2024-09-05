@@ -18,8 +18,11 @@ export default {
     extend: {
       colors: {
         'brand': '#e03131',
+        'brand-dark': '#FF8383',
         'new': '#1971c2',
+        'new-dark': '#55A1E6',
         'care': '#2f9e44',
+        'care-dark': '#3A994C',
       }
     },
   },

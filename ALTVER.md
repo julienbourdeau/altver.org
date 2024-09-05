@@ -2,11 +2,12 @@
 title: Alternative Versioning
 ---
 
-## Summary
+<div class="summary">
 
 ![ALTVER summary](./public/assets/altver.png#gh-light-mode-only)
 ![ALTVER summary](./public/assets/altver-dark.png#gh-dark-mode-only)
 
+## Summary
 
 The version number is composed of three parts: BRAND, NEW, and CARE.
 
@@ -15,6 +16,8 @@ when you add exciting new functionalities (including breaking change with an eas
 CARE version when you make backward compatible bug fixes and improvements
 
 Just like SemVer, additional labels for pre-release and build metadata are available as extensions.
+
+</div>
 
 ## Motivation
 
@@ -94,6 +97,10 @@ gem 'my-lib', '~> 4.7'
 ---
 
 ## FAQ
+
+#### Why use three main parts X.Y.Z?
+
+SemVer has become The One True Way™ to version software for a lot of people. We're very used to seeing versions with three parts, so it’s easier for everybody to keep them. In most cases, people won’t notice a package is following AltVer or SerVer.
 
 #### What are the numbering syntax differences between SemVer and AltVer?
 
