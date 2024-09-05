@@ -8,13 +8,13 @@
   <meta name="description" content="{{ attr.description }}" />
   <title>{{ attr.title }}</title>
 </head>
-<body class="mt-2 bg-white">
+<body class="mt-2 bg-white dark:bg-gray-800">
   <div class="container mx-auto max-w-4xl">
 
     <header class="text-center font-serif p-16 md:p-36 space-y-3 md:space-y-4">
       <h1 class="text-4xl font-semibold ">
         Alternative Versioning
-        <sup class="font-normal font-mono text-lg text-gray-blue-800 italic">beta</sup>
+        <sup class="font-normal font-mono text-lg text-sky-600 italic">beta</sup>
       </h1>
 
       <div class="text-lg md:text-xl">
@@ -26,14 +26,14 @@
 
     <div class="
       -mt-24 p-1.5 md:p-0
-      prose prose-lg md:prose-xl
+      prose md:prose-lg dark:prose-invert
       leading-6 md:leading-7 font-body
       max-w-none
       prose-headings:font-heading prose-headings:font-semibold
-      prose-a:text-gray-blue-700 prose-a:underline
-      prose-h2:mt-20 md:prose-h2:mt-28 md:prose-h2:text-4xl
-      prose-h3:mt-14 md:prose-h3:mt-18 md:prose-h3:text-2xl
-      prose-h4:mt-10 md:prose-h4:mt-12 md:prose-h4:text-xl
+      prose-a:text-sky-700 prose-a:underline
+<!--      prose-h2:mt-20 md:prose-h2:mt-28 md:prose-h2:text-4xl-->
+<!--      prose-h3:mt-14 md:prose-h3:mt-18 md:prose-h3:text-2xl-->
+<!--      prose-h4:mt-10 md:prose-h4:mt-12 md:prose-h4:text-xl-->
     ">
       {{{ body }}}
     </div>

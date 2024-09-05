@@ -5,7 +5,8 @@ title: Alternative Versioning
 ## Summary
 
 ![ALTVER summary](./public/assets/altver.png#gh-light-mode-only)
-<!-- ![ALTVER summary](./public/assets/altver-dark.png#gh-dark-mode-only) -->
+![ALTVER summary](./public/assets/altver-dark.png#gh-dark-mode-only)
+
 
 The version number is composed of three parts: BRAND, NEW, and CARE.
 
@@ -39,7 +40,7 @@ How do you fix it?
 
 Existing users will see it as a breaking change because they rely on this behavior. New users will see it as a bug, I mean the function clearly states that it returns a discount rate!
 
-**In summary, people consider things to be a bugfix or breaking change depending on how it affects them.**
+**People consider things to be a bugfix or breaking change depending on how it affects them.**
 
 As a maintainer, you’ll need to consider how critical is the feature, how new it is, how heavily it’s used to figure if it’s worth releasing a new Major for this, knowing all the implications of a new major.
 

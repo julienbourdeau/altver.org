@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .prose pre {
-  @apply bg-gray-blue-100 text-gray-blue-900 border border-gray-200;
+  @apply bg-gray-100 text-gray-900 border border-gray-200 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-400;
 }
 
-.prose code::before, .prose code::after {
-  content: '';
+.prose :where(code):not(:where([class~=not-prose],[class~=not-prose] *)) {
+  @apply font-normal;
 }
