@@ -1,6 +1,6 @@
-const fontFamily = require('tailwindcss/defaultTheme').fontFamily;
+import { fontFamily } from 'tailwindcss/defaultTheme';
 
-fontFamily.body = [...fontFamily.sans]
+fontFamily.body = ["Inter", ...fontFamily.sans]
 fontFamily.heading = [...fontFamily.serif]
 
 /** @type {import('tailwindcss').Config} */

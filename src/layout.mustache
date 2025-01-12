@@ -3,6 +3,10 @@
 <head><meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
   <link href="{{ css }}" rel="stylesheet">
 
   <meta name="description" content="{{ attr.description }}" />
@@ -14,7 +18,7 @@
     <header class="text-center font-serif p-16 md:p-36 space-y-3 md:space-y-4 text-black dark:text-white">
       <h1 class="text-4xl font-bold tracking-wide">
         Alternative Versioning
-        <sup class="font-normal font-mono text-lg text-brand dark:text-brand-dark italic">beta</sup>
+<!--        <sup class="font-normal font-mono text-lg text-brand dark:text-brand-dark italic">beta</sup>-->
       </h1>
 
       <div class="text-lg md:text-xl">
@@ -26,14 +30,14 @@
 
     <div class="
       -mt-24 p-1.5 md:p-0
-      prose md:prose-lg dark:prose-invert
+      prose-sm md:prose-lg dark:prose-invert
       leading-6 md:leading-7 font-body
       max-w-none
-      prose-headings:font-heading prose-headings:font-semibold
+      prose-headings:font-heading prose-headings:font-bold
       prose-a:text-new dark:prose-a:text-new-dark prose-a:underline
-<!--      prose-h2:mt-20 md:prose-h2:mt-28 md:prose-h2:text-4xl-->
-<!--      prose-h3:mt-14 md:prose-h3:mt-18 md:prose-h3:text-2xl-->
-<!--      prose-h4:mt-10 md:prose-h4:mt-12 md:prose-h4:text-xl-->
+      prose-h2:mt-20 md:prose-h2:mt-28 md:prose-h2:text-3xl md:prose-h2:font-bold
+      prose-h3:mt-14 md:prose-h3:mt-18 md:prose-h3:text-3xl prose-h3:font-medium
+      prose-h4:mt-10 md:prose-h4:mt-12 md:prose-h4:text-lg prose-h4:font-semibold
     ">
       {{{ body }}}
     </div>
