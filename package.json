@@ -4,7 +4,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "npx tailwindcss -i ./src/styles.css -o ./public/styles.css --minify && node ./src/index.js"
+    "build": "npx tailwindcss -i ./src/styles.css -o ./public/styles.css --minify && node ./src/index.js",
+    "watch": "sh watch.sh"
   },
   "repository": {
     "type": "git",
