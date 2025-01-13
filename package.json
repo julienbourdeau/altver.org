@@ -1,7 +1,7 @@
 {
   "name": "altver.org",
   "version": "0.0.1",
-  "type": "module",
+   "type": "module",
   "main": "index.js",
   "scripts": {
     "build": "npx tailwindcss -i ./src/styles.css -o ./public/styles.css --minify && node ./src/index.js",

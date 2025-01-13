@@ -15,6 +15,8 @@ Increment BRAND when you make something extraordinary, usually with breaking cha
 when you add exciting new functionalities (including breaking change with an easy upgrade path). Increment
 CARE version when you make backward compatible bug fixes and improvements
 
+__Basically, AltVer is like SemVer with small breaking change in minor versions.__
+
 Just like SemVer, additional labels for pre-release and build metadata are available as extensions.
 
 </div>
@@ -68,7 +70,8 @@ People are encouraged to use the same version requirement, usually _“all new v
 
 If you’re too afraid of breaking changes in NEW version and don’t have a good test coverage yet, you should at least update to latest CARE version automatically.
 
-Examples with NPM:
+<details>
+<summary>Examples with NPM</summary>
 
 ```json
 {
@@ -77,8 +80,10 @@ Examples with NPM:
   }
 }
 ```
+</details>
 
-Example with Composer:
+<details>
+<summary>Example with Composer</summary>
 
 ```json
 {
@@ -87,12 +92,17 @@ Example with Composer:
   }
 }
 ```
+</details>
 
-Example with Bundler:
+<details>
+
+<summary>Example with Bundler</summary>
 
 ```ruby
 gem 'my-lib', '~> 4.7'
 ```
+</details>
+
 
 ---
 
