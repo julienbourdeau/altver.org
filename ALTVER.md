@@ -4,6 +4,7 @@ seo_title: Alternative Versioning, a relaxed alternative to SemVer
 description: "Alternative Versioning is a different approach to the almighty Semantic Versioning: more relaxed, more trustful."
 url: "https://altver.org/"
 image: "https://altver.org/assets/altver-og-image.png"
+github: https://github.com/julienbourdeau/altver.org
 ---
 
 <div class="summary">

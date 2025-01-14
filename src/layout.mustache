@@ -58,9 +58,10 @@
       {{{ body }}}
     </div>
 
-    <footer class="mt-24 md:mt-32 px-2 pb-12 md:-y- md:px-0 8 flex items-center justify-between text-gray-500 text-sm ">
-      <div>Specified by <a class="underline" href="https://julienbourdeau.com">Julien Bourdeau</a></div>
-      <div>
+    <footer class="mt-24 md:mt-32 px-2 pb-12 md:-y- md:px-0 md:flex md:items-center md:justify-between text-gray-500 text-sm ">
+      <div>Specified by <a class="underline hover:text-new dark:hover:text-new-dark" target="_blank" href="https://julienbourdeau.com">Julien Bourdeau</a></div>
+      <div class="space-x-4 md:space-x-8">
+        <a target="_blank" class="hover:underline hover:text-new dark:hover:text-new-dark" href="{{ attr.github }}">Contribute on GitHub</a>
         <a class="font-bold" href="https://creativecommons.org/licenses/by/4.0/deed.en/">CC BY 4.0</a>
       </div>
     </footer>
