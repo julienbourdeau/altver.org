@@ -1,5 +1,9 @@
 ---
 title: Alternative Versioning
+seo_title: Alternative Versioning, a relaxed alternative to SemVer
+description: "Alternative Versioning is a different approach to the almighty Semantic Versioning: more relaxed, more trustful."
+url: "https://altver.org/"
+image: "https://altver.org/assets/altver-og-image.png"
 ---
 
 <div class="summary">
@@ -27,7 +31,7 @@ After over a decade of using and maintaining open source, I've come to believe S
 
 In one hand, most libraries users lock their dependencies manager to the latest minor version (ie: the latest released right before the next major).
 
-On the other hand, most maintainer are hesitant to tag a major version because it will partitions the community.
+On the other hand, most maintainer are hesitant to tag a major version because it will partition the community.
 
 In the wild, _many projects are actually versioned with AltVer without naming it. Maintainers often balance the pro and cons for each changes_ and might introduce “a breaking change” in a minor (or patch) version.
 
@@ -47,7 +51,7 @@ Existing users will see it as a breaking change because they rely on this behavi
 
 _People consider things to be a bug fix or breaking change depending on how it affects them._
 
-I chose this example because it happened to me in 2014 at [PrestaShop](https://github.com/PrestaShop/PrestaShop) but this is a story for another time.
+I chose this example because it happened to me in 2014 but this is a story for another time.
 
 ### The consequences of a Breaking Change
 

@@ -9,8 +9,22 @@
 
   <link href="{{ css }}" rel="stylesheet">
 
-  <meta name="description" content="{{ attr.description }}" />
   <title>{{ attr.title }}</title>
+  <meta name="description" content="{{ attr.description }}" />
+  <link rel="canonical" href="{{ attr.url }}" />
+
+
+  <meta property="og:title" content="{{ attr.title }}" />
+  <meta property="og:description" content="{{ attr.description }}" />
+  <meta property="og:image" content="/assets/altver-og-image.png" />
+  <meta property="og:url" content="{{ attr.url }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Alternative Versioning" />
+
+  <meta name="twitter:title" content="{{ attr.title }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@julienbourdeau" />
+
 </head>
 <body class="mt-2 bg-white dark:bg-gray-800">
   <div class="container mx-auto max-w-[825px]">
@@ -44,7 +58,7 @@
       {{{ body }}}
     </div>
 
-    <footer class="mt-24 md:mt-32 px-2 py-4 md:-y- md:px-0 8 flex items-center justify-between text-gray-500 text-sm ">
+    <footer class="mt-24 md:mt-32 px-2 pb-12 md:-y- md:px-0 8 flex items-center justify-between text-gray-500 text-sm ">
       <div>Specified by <a class="underline" href="https://julienbourdeau.com">Julien Bourdeau</a></div>
       <div>
         <a class="font-bold" href="https://creativecommons.org/licenses/by/4.0/deed.en/">CC BY 4.0</a>
