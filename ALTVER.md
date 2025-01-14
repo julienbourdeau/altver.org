@@ -15,7 +15,7 @@ Increment BRAND when you make something extraordinary, usually with breaking cha
 when you add exciting new functionalities (including breaking change with an easy upgrade path). Increment
 CARE version when you make backward compatible bug fixes and improvements
 
-__Basically, AltVer is like SemVer with small breaking change in minor versions.__
+_Basically, AltVer is like SemVer with small breaking change in minor versions._
 
 Just like SemVer, additional labels for pre-release and build metadata are available as extensions.
 
@@ -23,17 +23,17 @@ Just like SemVer, additional labels for pre-release and build metadata are avail
 
 ## Motivation
 
-After over a decade of using and maintaining open source, I've come to believe SerVer made everybody terrified of new Major version.
+After over a decade of using and maintaining open source, I've come to believe SerVer made everybody terrified of new Major versions._
 
-In one hand, most libraries users lock their dependencies manager to the latest minor version. So the latest released right before the next major.
+In one hand, most libraries users lock their dependencies manager to the latest minor version (ie: the latest released right before the next major).
 
-On the other hand, most maintainer are hesitant to tag a major version because they know it partitions the community.
+On the other hand, most maintainer are hesitant to tag a major version because it will partitions the community.
 
-In the wild, many projects are actually versioned with AltVer without naming it. The maintainers often balance the pro and cons and choose to add something that someone else would consider “a breaking change” into a minor or patch version.
+In the wild, _many projects are actually versioned with AltVer without naming it. Maintainers often balance the pro and cons for each changes_ and might introduce “a breaking change” in a minor (or patch) version.
 
-### What’s a breaking change?
+### Understanding What a breaking change is
 
-When I discovered SemVer, I thought this was very scientific and it’s obvious to everyone what a breaking change is and how it’s completely different from a bug fix. Unfortunately, it’s a lot more subtle than that.
+When I discovered SemVer, I thought this was very scientific and everyone always agrees on what a breaking change is. Unfortunately, it’s a lot more subtle than that.
 
 **Example**
 
@@ -43,13 +43,38 @@ Users start building on this function and automatically turn `70` into a nice �
 
 How do you fix it?
 
-Existing users will see it as a breaking change because they rely on this behavior. New users will see it as a bug, I mean the function clearly states that it returns a discount rate!
+Existing users will see it as a breaking change because they rely on this behavior. Their discount label are suddenly all wrong. New users will see it as a bug, I mean the function clearly states that it returns a discount rate!
 
-**People consider things to be a bugfix or breaking change depending on how it affects them.**
+_People consider things to be a bug fix or breaking change depending on how it affects them._
 
-As a maintainer, you’ll need to consider how critical is the feature, how new it is, how heavily it’s used to figure if it’s worth releasing a new Major for this, knowing all the implications of a new major.
+I chose this example because it happened to me in 2014 at [PrestaShop](https://github.com/PrestaShop/PrestaShop) but this is a story for another time.
 
-I chose this example because it happened to me in 2014 but this is a story for another time.
+### The consequences of a Breaking Change
+
+Whenever a breaking change is released, you’d increased the Major version number. Major version are well named **MAJOR** means it’s important and significant, so it should be rare
+
+#### Delayed release
+
+As a user, you don’t expect a major version every few weeks. So the breaking change are bundled and the fix is delayed. Instead of getting an important fix now, you’ll get it “next time”.
+
+One solution is sometimes to run a fork of the dependency until the next release, 
+
+#### Partitioning user base
+
+Most users upgrade to the latest minors but won’t update often to next major (unless you’re an important part of the stack). If you a small dependency, users won’t upgrade until they need too. It’s fine! But now as a maintainer you have users using multiple major version (sending reports, feature requests and so on).
+
+
+## Trust the maintainer
+
+Maintainers is always responsible for what gets into the release. They will way carefully weigh if something needs to fixed with or without breaking changes, when it should be release, and what the version type should be.
+
+Maintainers need to keep things manageable for them so you get new features and bug fixes.
+
+Maintainers will always avoid breaking things and upsetting the people trusting them with their code.
+
+Mistakes happen. It happens to all of us but generally, you should trust the maintainer.
+
+_AltVer is a statement that maintainers will do their best to balance all the project stakes. Trust the maintainer._
 
 
 ## Specification
@@ -62,13 +87,37 @@ New CARE version include bug fixes, performance improvements, and new features t
 
 As the project matures, BRAND probably reach the end and won't be updated again, NEW become more and more rare while CARE is the most common.
 
-## Recommendations
+### NEW or PATCH ?
 
-### Version requirements
+Fixing a bug? Should be PATCH.
 
-People are encouraged to use the same version requirement, usually _“all new versions until next BRAND”_.
+Adding a small insignificant feature? Should be PATCH.
 
-If you’re too afraid of breaking changes in NEW version and don’t have a good test coverage yet, you should at least update to latest CARE version automatically.
+Adding a really cool feature? Should be NEW
+
+Introducing a breaking change? Should NEVER be PATCH.
+
+Judging the coolness of a feature is very subjective but typically, it’s something that has been anticipated. _If users keep requesting this feature it’s definitely a NEW._ Again, as a maintainer, you know.
+
+### BRAND or NEW ?
+
+When there is a new feature and it’s breaking, should it be a BRAND or a NEW version? The maintainer will take into consideration many things to decide:
+
+* How likely the users are going to be affected.
+* How hard it is to upgrade.
+* How much it’s gonna partition the community.
+
+It it breaks everything but all the users have to do is change a key configuration, it might be fine. If the upgrade is harder but it most likely affects nobody because it’s not the way things were supposed to be used, it might be fine too.
+
+_Maintains might have different opinions on each situation but it’s already like that with SemVer._ AltVer just makes it explicit.
+
+BRAND is also used when maintainers are bundling a lot of cool feature and they want to draw more attention to a version. BRAND don’t have to be breaking but they often are.
+
+### Recommended version requirements for users
+
+Users are encouraged to set their version requirement to “latest version until next BRAND”, which is typically what we do for SerVer.
+
+If don’t have a enough test coverage yet, you should at least update to latest CARE version automatically.
 
 <details>
 <summary>Examples with NPM</summary>

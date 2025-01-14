@@ -2,16 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-.prose pre {
-  @apply bg-gray-50 text-gray-900 border border-gray-200 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-400;
-}
-
 .summary {
   @apply mb-20 md:prose-xl md:mb-32;
-  strong {
-    @apply bg-yellow-100 dark:bg-yellow-800;
+  img {
+    @apply p-4 md:p-12;
   }
 }
-.summary img {
-  @apply p-4 md:p-12;
+
+.prose {
+  em {
+    @apply bg-yellow-100 dark:bg-yellow-800 not-italic;
+  }
+
+  pre {
+    @apply bg-gray-50 text-gray-900 border border-gray-200 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-400;
+  }
+
+  details {
+    @apply my-2
+  }
 }
